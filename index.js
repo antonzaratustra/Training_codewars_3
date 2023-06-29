@@ -150,4 +150,43 @@ function countGrade(scores) {
 }
 
 
-console.log(countGrade([65,75,85,85,95,100,100]))
+//console.log(countGrade([65,75,85,85,95,100,100]))
+
+function mirrorImage(arr) {
+  let a = 0
+  let b = 0
+  
+  arr.some((x, i) => {
+    a = arr[i]
+    b = arr[i + 1]
+    return isPalindrome(a, b)
+  
+  })
+  
+  if (!isPalindrome(a, b)) {
+    return [-1, -1]
+  } else if (isPalindrome(a, b)) {
+    return [a, b]
+  }
+  
+}
+
+let isPalindrome = (a, b) => {
+  let aToString = String(a)
+  let bToString = String(b)
+  
+  if (aToString.length !== bToString.length) {
+   return false
+  }
+  
+   for (let i = 0; i < aToString.length; i++) { 
+     
+       if (aToString[i] !== bToString[aToString.length-i-1]) {
+           return false
+        }
+   }
+
+  return true
+}
+console.log(mirrorImage([454,0,573564,465375,0,16,88]))
+console.log(mirrorImage([4105,93085,85139,81566,24452,62239,66025,93476,29059,65461,63091,5569,49631,6291,1926,6291]))
