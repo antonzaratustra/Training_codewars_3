@@ -25,7 +25,7 @@
 //console.log(infiniteLoop([[1,2,3],[4,5,6],[7,8,9]],"right",1))
 
 
-
+//test comment
 
 // function getSum(arr) {
 //   let result = 0
